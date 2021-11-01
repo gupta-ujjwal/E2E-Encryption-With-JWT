@@ -1,29 +1,9 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This repository contains a round trip implementation of E2E encryption method(JWE+JWS). The combination of JWE + JWS ensures integrity, authenticity, non-repudiation and confidentiality of the data.
 
-### What is this repository for? ###
+Note : The code samples added have hardcoded keys, which are mainly to explain how things work. It is not a recommended practice to hardcode sensitive information in the code, Please take the necessary measurements to store and access keys.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact# E2E-Encryption-With-JWT
+References:
+JWE RFC - https://datatracker.ietf.org/doc/html/rfc7516
+JWS RFC - https://datatracker.ietf.org/doc/html/rfc7515
