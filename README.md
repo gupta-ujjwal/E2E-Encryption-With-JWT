@@ -5,5 +5,5 @@ This repository contains a round trip implementation of E2E encryption method(JW
 Note : The code samples added have hardcoded keys, which are mainly to explain how things work. It is not a recommended practice to hardcode sensitive information in the code, Please take the necessary measurements to store and access keys.
 
 References:
-JWE RFC - https://datatracker.ietf.org/doc/html/rfc7516
-JWS RFC - https://datatracker.ietf.org/doc/html/rfc7515
+1. JWE RFC - https://datatracker.ietf.org/doc/html/rfc7516
+2. JWS RFC - https://datatracker.ietf.org/doc/html/rfc7515
