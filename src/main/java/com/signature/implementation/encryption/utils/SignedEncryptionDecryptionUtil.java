@@ -70,10 +70,14 @@ public class SignedEncryptionDecryptionUtil {
         String encryptedPayload = Base64.getEncoder().encodeToString(encryptedPayLoadByteArr);
         String tag = Base64.getEncoder().encodeToString(tagByteArr);
         String iv = Base64.getEncoder().encodeToString(originalIV);
-        // TODO - Use compact serialization here
+        JSONObject head = new JSONObject();
+        head.accumulate("kid", "cb59cce2-7581-414d-bff7-6ecf132dbef1");
+        head.accumulate("alg", "RSA-OAEP");
+        head.accumulate("enc", "A256GCM");
         nextRequest.accumulate("encryptedKey", encryptedKey);
         nextRequest.accumulate("encryptedPayload", encryptedPayload);
-        nextRequest.accumulate("tag", tag);
+        nextRequest.accumulate("aad", tag);
+        nextRequest.accumulate("header", head);
         nextRequest.accumulate("iv", iv);
         nextRequest.accumulate("rsaKeyId", rsaKId);
         return nextRequest;
